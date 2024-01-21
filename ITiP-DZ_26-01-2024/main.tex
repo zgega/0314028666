@@ -1,39 +1,58 @@
-\documentclass{article}
+\documentclass[14pt]{article}
 \usepackage[T1]{fontenc}
+\usepackage{times} % Font Times New Roman
 \usepackage[croatian]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\linespread{1.2}
 
 \usepackage{graphicx} % Paket za umetanje slika
 \usepackage{tabularx} % Paket za napredne tablice
 \usepackage{amsmath} % Paket za matematiku
-\usepackage{hyperref} % Paket za hyperlinkove
+\usepackage[hidelinks]{hyperref} % Paket za hyperlinkove
 \usepackage{float} % Za bolje pozicioniranje slika
-
-\title{Konfiguracija gaming računala}
-\author{Zdenko Gega}
-\date{Siječanj 2024}
+\usepackage{booktabs} % Za bolje horizontalne linije
 
 \setcounter{secnumdepth}{1}
 
 \begin{document}
 
-\maketitle
-\clearpage
+\begin{titlepage} % Naslovna stranica
+\centering
+
+    \vspace*{2cm} % Vertikalni razmak
+    
+    {\Large Veleučilište u Bjelovaru \\ Računarstvo}\par
+    \vspace{1.5cm} % Vertikalni razmak
+    
+    {\Huge\bfseries Popis komponenti za gaming računalo}\par % Naslov
+    \vspace{2cm} % Vertikalni razmak
+    
+    {\Large\itshape Zdenko Gega}\par % Ime autora
+    \vfill % Ispunjavanje ostatka stranice praznim prostorom
+    
+    \vspace{1cm} % Vertikalni razmak
+    
+    {\large 21, Siječnja 2024.}\par % Datum
+
+\end{titlepage}
+
+
 \tableofcontents
 \clearpage
 
-\section{Uvod}
-Uvodni tekst
-\clearpage
+\section{UVOD}
+U svijetu gdje tehnologija napreduje brže nego ikad, gaming računala postaju ne samo platforme za igru nego i središta naše digitalne svakodnevice. Ovaj dokument pruža detaljan pregled komponenti izabranih za izgradnju gaming računala, koje neće biti samo super za igre, već i pouzdan partner u svakodnevnim zadatcima. Odabir komponenti nije lagan zadatak. Svaka od njih odabrana je s posebnom pažnjom, uzimajući u obzir kako performanse, tako i cijenu, kako bi se osigurao najbolji mogući omjer vrijednosti i učinkovitosti. Kroz ovaj dokument, čitatelj će biti upoznat s razmatranjima koja su vodila procesu odabira, od procesora do kućišta, pružajući uvid u kompleksnost izrade konfiguracije koja je prilagođena ne samo zahtjevima današnjih igara već i budućim nadogradnjama. Komponente sam birao na internet trgovini \textit{Instar-Informatika}. Ovu internet trgovinu sam odabrao zato što je tijekom izrade ovog dokumenta svaka komponenta kod njih bila dostupna.
 
-\section{Komponente}
+\clearpage
+\section{KOMPONENTE}
 
     \subsection{Procesor (CPU)}
     Izabran je procesor \textit{Intel Core i5-13400} koji je dio \textit{Intel Raptor Lake-S} serije Intel procesora. Ovo je procesor 13.-e generacije. Podnožje \emph{(eng. socket)} procesora je \textit{Intel LGA1700}. Procesor ima 10 jezgri i 16 niti \emph{(eng. threads)}. Ima 20MB L3 predmemorije \emph{(eng. Cache)} Intel Smart Cache, te 9.5MB L2 Cache. Osnovni radni takt procesora je 2.50GHz, a maksimalni radni takt procesora je 4.60GHz. Procesor zahtjeva 65W u normalnom radu, te do 154W u maksimalnom modu rada. Tehnologija prozivodnje 10nm. Procesor ima ugrađen i grafički procesor \textit{Intel UHD Graphics 730} koji ima raspon rada od 300MHz do 1550MHz. Na testiranju procesora \emph{(eng. Benchmark)} u Multi Thread načinu rada sa četiri prolaska, program pokazuje 59510 MIPS \emph{(eng. mega instructions per second)} što pokazuje brzinu izvedbe naredbi u sekundi. Izabrao sam ovaj procesor, jer se nalazi među vrhom najboljih procesora za \textit{Gaming}. U omjeru performansi i cijene.
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{Slike/Procesor.jpg}
+        \includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{Slike/Procesor.jpg}
         \caption{Procesor Intel Core i5-13400}
         \label{fig:Procesor}
     \end{figure}
@@ -52,7 +71,7 @@ Uvodni tekst
     \end{table}
     
     \clearpage
-    \subsubsection{Hladnjak procesora}
+    \subsection{Hladnjak procesora}
     Izabran hladnjak za procesor je \textit{Zalman CNPS10X Optima II}. Hladnjak na sebi ima ventilator veličine 120mm sa RGB osvjetljenjem za estetiku. Sam hladnjak se sastoji od čistog bakra i aluminija. Za ovu komponentu nema nekog specifičnog razloga zašto sam je odabrao, osim što je bolja nego bilo koji hladnjak koji dolazi u originalnom pakiranju, te ujedno zbog estetskih razloga, jer posjeduje RGB ventilator.
 
     \begin{figure}[H]
@@ -316,26 +335,63 @@ Uvodni tekst
     \end{table}
 
 \clearpage
-\section{Troškovi}
+\section{TROŠKOVI}
+Cijene svih proizvoda su podložne izmjenama na internet trgovini, a tako i uklanjanje proizvoda. Ove cijene su vrijedile za vrijeme izrade ovog dokumenta (Siječanj, 2024.)
 
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{|c|c|}
-            \hline
-            Naziv & Cijena \\
-            \hline
-            Razer BlackShark V2 X & 73,99 € \\
-            \hline
-        \end{tabular}
-        \caption{Cijena slušalica}
-        \label{tab:Slusalice}
-    \end{table}
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{llc}
+        \toprule % Gornja horizontalna linija
+        \textbf{Komponenta} & \textbf{Naziv} & \textbf{Cijena (€)} \\
+        \midrule % Srednja horizontalna linija
+        CPU & Intel Core i5-13400 & 299,00 \\
+        GPU & Gigabyte GeForce RTX3060 & 375,00 \\
+        RAM & Kingston Fury Beast & 91,27 \\
+        MB & ASRock B660M Pro & 132,12 \\
+        PSU & Corsair CX750 & 91,29 \\
+        SSD & WD Green SN350 & 85,02 \\
+        Hladnjak & Zalman CNPS10X Optima II & 44,00 \\
+        Monitor & Asus 27" TUF Gaming & 175,00 \\
+        Miš & Logitech G502 Hero & 49,99 \\
+        Tipkovnica & AOC AGK700 & 109,99 \\
+        Slušalice & Razer BlackShark V2 X & 73,99 \\
+        \midrule % Linija prije sume
+        \textbf{Ukupno} & & \textbf{1.526,67 €} \\ % Ručno ažurirati ukupnu cijenu
+        \bottomrule % Doljnja horizontalna linija
+    \end{tabular}
+    \caption{Lista svih komponenti s cijenom}
+    \label{tab:Komponente}
+\end{table}
 
 \clearpage
-\section{Zaključak}
-Ukratko napisat zaključak
-\clearpage
+\section{ZAKLJUČAK}
+Zaključno, pažljivo izabrane komponente ovog gaming računala čine ga izuzetno sposobnim za najnovije gaming izazove, ali i svestranim strojem za sve aspekte digitalnog života. Ispostavilo se da je ravnoteža između cijene i performansi ključna za izradu sistema koji ne samo da zadovoljava trenutne potrebe već ima i prostora za rast. Dok tehnologija napreduje, tako će i ova konfiguracija se nastaviti nadograđivati, ali temelji postavljeni u ovom dokumentu pružit će čvrstu platformu za buduće nadogradnje. U svijetu koji se brzo mijenja, prilagodljivost i predviđanje su neophodni, a ovaj računalni sustav je izgrađen s tim na umu, osiguravajući da ostane relevantan i konkurentan u godinama koje dolaze.
 
+\clearpage
+\section{OZNAKE I KRATICE}
+
+\clearpage
+\section{POPIS SLIKA I TABLICA}
 \listoffigures
+\listoftables
+
+\clearpage
+\section{LISTA LINKOVA PROIZVODA}
+Linkovi svih proizvoda su asocirani sa niže navedenim nazivima. Da biste otvorili link u PDF-u, kliknete na neki od naziva proizvoda. Također možete provjeriti putanju na koju naziv pokazuje, tako što ćete zadržati pokazivač miša iznad naziva nekog proizvoda, zatim će vam se prikazati veza na koju se odlazi klikom.
+
+\begin{enumerate}
+  \item \href{https://www.instar-informatika.hr/procesor-intel-core-i5-13400/150919/product/}{Intel Core i5-13400}
+  \item \href{https://www.instar-informatika.hr/hladnjak-za-procesor-zalman-cnps10x-optima-ii-1x120mm-intel-lga1151-/147663/product/}{Zalman CNPS10X Optima II}
+  \item \href{https://www.instar-informatika.hr/maticna-ploca-asrock-b660m-pro-rs-ddr4-intel-lga1700-micro-atx/113005/product/}{ASRock B660M Pro}
+  \item \href{https://www.instar-informatika.hr/memorija-kingston-fury-beast-black-xmp-32gb-2x16gb-ddr4-3200mhz-c/220718/product/}{Kingston Fury Beast}
+  \item \href{https://www.instar-informatika.hr/graficka-gigabyte-geforce-rtx3060-windforce-oc-12gb-gddr6/224178/product/#tehspecsection}{Gigabyte GeForce RTX3060 Windforce OC}
+  \item \href{https://www.instar-informatika.hr/ssd-western-digital-green-sn350-1tb-m2-nvme-pcie-gen3-r3200w2500/108273/product/}{SSD WD Green SN350}
+  \item \href{https://www.instar-informatika.hr/napajanje-corsair-cx750-750w-80-bronze-atx/220363/product/}{Corsair CX750}
+  \item \href{https://www.instar-informatika.hr/kuciste-bit-force-paladin-argb-4-mid-tower-kaljeno-staklo-bez-napaj/220338/product/}{Bit Force Paladin}
+  \item \href{https://www.instar-informatika.hr/monitor-asus-27-tuf-gaming-vg279q1a-ips-gaming-adaptive-sync-amd-/117476/product/}{Asus 27" TUF Gaming}
+  \item \href{https://www.instar-informatika.hr/mis-logitech-g502-hero-zicani-gaming-25600dpi-hero-senzor-rgb-cr/77229/product/}{Logitech G502 Hero}
+  \item \href{https://www.instar-informatika.hr/tipkovnica-aoc-agk700-zicana-gaming-mehanicka-cherry-mx-red-switch/160870/product/#opis}{AOC AGK700}
+  \item \href{https://www.instar-informatika.hr/slusalice-razer-blackshark-v2-x-zicane-gaming-71-mikrofon-over-e/96560/product/}{Razer BlackShark V2 X}
+\end{enumerate}
 
 \end{document}
